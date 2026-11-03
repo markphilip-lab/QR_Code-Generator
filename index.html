@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>QR Code Generator</h1>
+            <p>Turn your links into QR codes instantly.</p>
+        </header>
+
+        <section class="generator-card">
+
+            <div class="input-section">
+                <label for="urlInput">Enter your website URL</label>
+
+                <input
+                    type="url"
+                    id="urlInput"
+                    placeholder="https://example.com"
+                >
+
+                <button id="generateBtn">Generate QR Code</button>
+            </div>
+
+            <div class="qr-section">
+
+                <div class="qr-placeholder" id="qrPlaceholder">
+                    <div class="placeholder-icon">QR</div>
+                    <p>Your QR code will appear here</p>
+                </div>
+
+                <div id="qrResult" class="qr-result"></div>
+
+                <button id="downloadBtn" class="download-btn">
+                    Download QR Code
+                </button>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>QR Code Generator &copy; 2026</p>
+        </footer>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
