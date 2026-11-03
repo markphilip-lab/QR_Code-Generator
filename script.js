@@ -55,3 +55,31 @@ urlInput.addEventListener("keypress", function(event) {
         generateQRCode();
     }
 });
+
+function downloadQRCode(){
+    const canvas = qrResult.querySelector("canvas");
+    const image =qrResult.querySelector("img");
+
+    let imageURL;
+
+    if (canvas){
+        imageURL = canvas.toDataURL("image/png");
+    }
+    else if(image && image.src.startsWith("data:image")){
+        imageURL = image.src;
+    }
+    else{
+        alert("Please generate a QR Code first.");
+    }
+
+    const downloadLink = document.createElement("a");
+
+    downloadLink.href = imageURL;
+    downloadLink.download = "qr-nova.png";
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
+
+downloadBtn.addEventListener("click", downloadQRCode);
