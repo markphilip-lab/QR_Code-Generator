@@ -165,3 +165,22 @@ footer {
         padding: 22px;
     }
 }
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.brand-icon {
+    width: 35px;
+    height: 35px;
+    color: #4f46e5;
+    stroke-width: 2.5;
+}
+.qr-generated{
+    width: 35px;
+    height: 35px;
+    color: #4f46e5;
+    stroke-width: 2.5;
+}

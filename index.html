@@ -11,9 +11,9 @@
 
     <main class="container">
 
-        <header class="header">
+        <header class="brand">
+            <i data-lucide="qr-code" class="brand-icon"></i>
             <h1>QR NOVA</h1>
-            <p>Generate QR codes from your links instantly.</p>
         </header>
 
         <section class="generator-card">
@@ -33,7 +33,7 @@
             <div class="qr-section">
 
                 <div class="qr-placeholder" id="qrPlaceholder">
-                    <div class="placeholder-icon">QR</div>
+                    <i data-lucide="qr-code" class="qr-generated"></i>
                     <p>Your QR code will appear here</p>
                 </div>
 
@@ -53,6 +53,10 @@
 
     </main>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>
 </body>
